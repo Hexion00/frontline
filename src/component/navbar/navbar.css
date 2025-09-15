@@ -1,0 +1,83 @@
+
+/*--- navbar---- */
+
+.nav_bar {
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: center; /* centra tutto */
+  gap: 20px;               /* spazio massimo 10px tra voci */
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(77, 76, 76);
+  border-radius: 50px;
+
+  position: fixed;              /* Sempre visibile */
+  top: 20px;                     /* Distanza dal bordo alto */
+  left: 50%;                     /* Punto centrale */
+  transform: translateX(-50%);   /* Centra rispetto alla larghezza */
+  z-index: 9999;                  /* Sopra le card */
+}
+
+
+.nav_bar > * {
+  cursor: pointer;
+}
+
+
+
+.div-sottoC {
+  background-color: black; /* o bianco se usi la modalità chiara */
+  border: solid 1px rgb(99, 97, 97);
+  margin-top: 50px;
+  padding: 1rem;
+  border-radius: 10px;
+  /*width: max-content;*/
+  max-width: 700px;
+  margin-left: -60%;
+  margin-right: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 colonne uguali */
+  gap: 20px; /* spazio tra le card */
+  max-width: 800px; /* o la larghezza che vuoi */
+  margin: 0 auto; /* per centrare il contenitore */
+  color: aliceblue;
+
+}
+
+.card-wrapper {
+  /*background-color: aqua;*/
+  padding: 10px;
+}
+
+.servizi-link {
+  display: flex;
+  flex-direction: column; /* Link uno sotto l’altro */
+  gap: 10px;              /* Spaziatura tra i link */
+  /*padding: 1rem; */         /* Spazio interno */
+        /* Larghezza massima */
+        color: rgb(255, 254, 254);
+}
+
+.contact-link{
+      display: flex;
+  flex-direction: column; /* Link uno sotto l’altro */
+  gap: 10px;              /* Spaziatura tra i link */
+  /*padding: 1rem;  */        /* Spazio interno */
+  color: rgb(255, 255, 255);
+  
+}
+.contact-link a {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
