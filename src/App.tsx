@@ -4,9 +4,10 @@ import './App.css'
 
 {/* ---IMPORT--- */}
 import { PinContainer } from '@/component/3dpin';
-import { HeroParallax } from './component/HeroParallax';
 import { GlareCard } from "./component/cardStudy";
 import { ContactForm } from './component/contactForm';
+
+import Navbar from "./component/navbar/navbarApp"; // aggiorna il percorso corretto
 
 
 {/* ---IMMAGINI--- */}
@@ -16,7 +17,9 @@ import imgDante from './img.header/screen-DCommedia.png';
 
 
 {/* ---LOGO--- */}
-import myLogo from './logo/logo_divinaCommedia.png';
+import LogoD from './logo/logo_divinaCommedia.png';
+import myLogo from './logo/logo_1.png';
+
 
 
 
@@ -83,33 +86,69 @@ function App() {
   
 
 {/* ---HOME--- */}
-<HeroParallax products={products} />
+
+
+<div className="container">
+
+  <div >
+        <Navbar />
+      </div>
+
+  {/* Primo container */}
+<div className="home">
+  {/* Logo sopra il titolo */}
+  <img  src={myLogo} alt="Logo" className="home-logo" />
+
+
+
+  {/* Sottotitolo */}
+  <h1 className="home-subtitle">Front-End Developer <br /> UI & UX Focus</h1>
+
+
+
+  {/* Pulsante */}
+  <button className='button-section'> <a href="#project" >Vai ai Progetti</a></button>
+</div>
+
+
+  {/* Secondo container */}
+  <div className="sotto-home">
+    
+      <div className="skills-icons">
+          <span className="skill-html"><i className="devicon-html5-plain"></i></span>
+          <span className="skill-css"><i className="devicon-css3-plain"></i></span>
+          <span className="skill-js"><i className="devicon-javascript-plain"></i></span>
+        </div>
+
+  </div>
+</div>
+
+
+
 
 
 
 {/* ---ABOUT--- */}
 <div className="about" id='about'>
 
-  <header className='header-about'>
-    <div className="container">
+
+    <div className="container-about21">
 
     {/* Colonna sinistra */}
-    <div className="left">
+    <div className="left-Aboute">
 
 <div className='aboute-lin1'>
   <div className='line1'></div>
   <p>Front-End | Developer | Junior</p>
-
 </div>
 
-      
+    <div className='left-header_1'>
+      <h2 className="my-project-title"><span className="highlight">GET IN TOUCH</span> <br /> WITH ME</h2>
+  <div>
+    <h1 className='h1_decorazion'>B-A © 2025</h1>
+  </div>
 
-             <h2 className="my-project-title">
-  <span className="highlight"> Front-End </span> Developer 
-   Creatività <br />& Codice
-</h2>
-
-    
+    </div>
 
       <div className='div-p-about'>
         <p className='p-aboutDescri'>Ciao, mi chiamo Boghian Alexandru. La programmazione è una parte importante 
@@ -128,12 +167,12 @@ function App() {
 
 
 </div>
-</header>
+
 
 
 
 <div className='cards-wrapper-1'>
-  <h1 className='h1-study'>STUDY</h1>
+  <h1 className='h1-study'  >STUDY</h1>
 
 
   <div className="cards-wrapper">
@@ -177,9 +216,9 @@ function App() {
   {/* elementi visivi sotto il paragrafo: mini simboli che richiamano le card */}
 
 </div>
-
-
 </div>
+
+
 
 
 <div className="about-right">
@@ -189,9 +228,9 @@ function App() {
     <div className="skills-header">
       <h2 className="skills-title">My Skills</h2>
       <p className="skills-subtitle">
-       Questa sezione offre una panoramica delle tecnologie e degli strumenti che utilizzo nel mio percorso 
-       quotidiano di sviluppo. Mi aiutano a creare applicazioni moderne, veloci e ben strutturate, 
-       con particolare attenzione alla qualità del codice e all’esperienza dell’utente
+Questa sezione mostra le tecnologie e gli strumenti che utilizzo nel mio lavoro quotidiano di sviluppo. 
+Mi permettono di creare applicazioni moderne e ben strutturate, con attenzione sia alla qualità del 
+codice che all’esperienza dell’utente.
       </p>
       <span className="skills-bg-text">Skills</span>
 
@@ -254,38 +293,36 @@ function App() {
 {/* ---PROJECT--- */}
 <div className='project-section' id='project'>
 
-  <div className='my-project-section'>
-    {/* Colonna sinistra */}
-    <div className='my-project-left'>
-      <div className='left-header'>
+
+
 
 <div className='aboute-lin1'>
   <div className='line1'></div>
   <p>Front-End | Developer | Junior</p>
-
 </div>
 
-             <h2 className="my-project-title">
-  <span className="highlight">Progetti realizzati </span> e <br />
-   idee sviluppat
-</h2>
-          <div className='title-underline'></div>
-      </div>
+    <div className='left-header_1'>
+      <h2 className="my-project-title"><span className="highlight">GET IN TOUCH</span> <br /> WITH ME</h2>
+  <div>
+    <h1 className='h1_decorazion'>B-A © 2025</h1>
+  </div>
 
-        <p className='my-project-description'>
-Qui puoi scoprire alcuni dei miei progetti più significativi. Ogni progetto mostra le tecnologie principali 
-utilizzate, le sfide affrontate e le soluzioni implementate. L'obiettivo è evidenziare come combino design e 
-funzionalità per creare esperienze interattive e moderne, in cui ogni dettaglio conta. Ogni lavoro racconta una 
-storia unica di creatività e innovazione, pensata per offrire agli utenti interazioni fluide, intuitive e piacevoli, 
-mostrando il mio approccio metodico e la mia attenzione alla qualità in ogni fase dello sviluppo.
-
-        </p>
-
-     
     </div>
-
-
+<div className='container-project'>
+        <p className='my-project-description'>In questa sezione presento alcuni dei miei progetti 
+          più rappresentativi. Ognuno mostra le tecnologie utilizzate, le sfide affrontate e le 
+          soluzioni adottate, mettendo in evidenza il mio approccio: unire design e funzionalità 
+          per creare applicazioni intuitive, affidabili e curate in ogni dettaglio. L’obiettivo è 
+          dimostrare non solo le competenze tecniche, ma anche il metodo con cui trasformo le idee 
+          in soluzioni concrete e di qualità.</p>
 </div>
+
+
+
+
+
+
+
 
 {/* ---PROJECT-CARD--- */}
 <div className='container_cardP'>
@@ -348,7 +385,7 @@ mostrando il mio approccio metodico e la mia attenzione alla qualità in ogni fa
             </div>
             <h3 className="title">Progetto {i + 2}</h3>
             <p className="description">
-              Una descrizione breve e accattivante del progetto numero {i + 2}.
+              In corso... {i + 2}.
             </p>
             <a
               href={`https://link-al-progetto${i + 2}.com`}
@@ -378,21 +415,23 @@ mostrando il mio approccio metodico e la mia attenzione alla qualità in ogni fa
 {/* ---CONTACT--- */}
 <div className="contact-section" id='contact'>
 
-    <div className='left-header_1'>
+
 
 <div className='aboute-lin1'>
   <div className='line1'></div>
   <p>Front-End | Developer | Junior</p>
 
 </div>
-
-      <h2 className="my-project-title">
-  <span className="highlight">Scrivimi</span> per domande, <br />
-  progetti o collaborazioni
-</h2>
-
-
+    <div className='left-header_1'>
+      <h2 className="my-project-title"><span className="highlight">GET IN TOUCH</span> <br /> WITH ME</h2>
+ <div>
+      <h1 className='h1_decorazion'>B-A © 2025</h1>
+</div>
     </div>
+
+  
+
+    
 
   <div className="container-2">
 
@@ -483,27 +522,27 @@ mostrando il mio approccio metodico e la mia attenzione alla qualità in ogni fa
     <div className="footer-section">
       <h3 className="footer-title">Navigazione</h3>
       <ul>
-        <li><a href="#about">Home</a></li>
-        <li><a href="#projects">about</a></li>
-        <li><a href="#skills">Project</a></li>
+        
+        <li><a href="#about">about</a></li>
+        <li><a href="#project">Project</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
     
-    <div className="footer-section">
+  {/*  <div className="footer-section">
       <h3 className="footer-title">Seguimi</h3>
       <ul>
         <li><a href="https://github.com/tuoprofilo" target="_blank">GitHub</a></li>
         <li><a href="https://linkedin.com/in/tuoprofilo" target="_blank">LinkedIn</a></li>
         <li><a href="https://twitter.com/tuoprofilo" target="_blank">Twitter</a></li>
       </ul>
-    </div>
+    </div>*/}
 
     
     <div className="footer-section">
       <h3 className="footer-title">Contatti</h3>
-      <p>Email: <a href="mailto:tuo@email.com">tuo@email.com</a></p>
+      <p>Email: <a href="costa.alle111@gmail.com">costa.alle111@gmail.com</a></p>
       <p>Cellulare: +393342721529</p>
     </div>
 

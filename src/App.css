@@ -3,6 +3,179 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Container principale che copre tutto lo schermo */
+.container {
+  height: 99vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Primo container: contenuto principale */
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+
+  /*background-color: #e7e5e5;  */
+  background-color: #000000;
+  color: #000;
+
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  /*border-bottom: 2px solid #414141;*/
+
+  padding: 40px 20px;
+}
+
+.home-logo{
+  width: 150px;
+}
+
+.home-subtitle{
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.home-mini-paragraph{
+  color: white;
+}
+
+
+
+/* Paragrafo */
+.home p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Sottoparagrafo */
+.home span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Secondo container con icone */
+.sotto-home {
+  position: relative;
+  background-color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 20px;               
+  padding: 20px;
+}
+
+/* pseudo-elemento per il bordo solo sugli angoli inferiori */
+.sotto-home::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* altezza curva */
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom: 2px solid #000000; /* stesso colore e spessore elegante */
+  pointer-events: none;
+}
+
+
+
+
+/* Contenitore delle icone */
+.skills-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  
+ 
+}
+
+/* Wrapper per padding */
+.skills-icons span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: transparent;
+}
+
+/* Icone con gradient shimmer */
+.skills-icons i {
+  font-size: 60px;
+  color: #ccc; /* colore neutro elegante */
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.1) 0%,
+    rgba(255,255,255,0.25) 50%,
+    rgba(255,255,255,0.1) 100%
+  );
+
+   background-color: #000;
+
+  /*background: linear-gradient(
+  90deg,
+  rgba(0, 120, 255, 0.1) 0%,
+  rgba(0, 120, 255, 0.35) 50%,
+  rgba(0, 120, 255, 0.1) 100%
+);*/
+
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .about{
     width: 100%;
@@ -42,6 +215,10 @@
    background-color: rgb(255, 255, 255);
   height: auto;
   
+}
+
+.left-Aboute{
+  margin-top: 70px;
 }
 
 .aboute-lin1 {
@@ -117,15 +294,6 @@ height: 50px;
 
 
 
-.header-about .container {
-  /*display: grid;*/
-  grid-template-columns: 1fr 1fr;
-  /*gap: 9rem;*/
-  /*align-items: center;*/
-   background-color: rgba(206, 206, 207, 0.6);
-  margin: 0 auto;
-  padding: 20px 15px;
-}
 
 
 
@@ -147,25 +315,50 @@ height: 50px;
 
 
 .div-p-about {
-  width: 50%;
-  margin-top: 30px;
-    margin-bottom: 80px;
-    /*border-radius: 8px;*/
+    padding: 10px 20px;
+    margin: 0px 20px;
+    /* background-color: rgba(200, 200, 200, 0.3); */
+    background-color: rgba(146, 145, 145, 0.3);
+
 }
+
 
 
 .p-aboutDescri{
-  
-  margin-bottom: 20px;
-  
-      font-size: 17px;
-    
+      width: 60%;
+    font-size: 17px;
     font-weight: 600;
     color: #000000;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
     margin-bottom: 1.5rem;
+    text-align: left;
+
 }
 
+/* Smartphone grandi e medi */
+@media (max-width: 768px) {
+  .p-aboutDescri {
+    width: 100%;
+    
+  }
+}
 
+/* Smartphone piccoli */
+@media (max-width: 480px) {
+
+  .div-p-about {
+    padding: 10px 20px;
+    margin: 0px 0px;
+    
+
+}
+
+  .p-aboutDescri {
+    width: 100%;
+    
+  }
+}
 
 
 .lineAboute {
@@ -218,58 +411,12 @@ height: 50px;
 }
 
 
-/* Contenitore delle icone */
-.skills-icons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
- 
-}
-
-/* Wrapper per padding */
-.skills-icons span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  border-radius: 12px;
-  background: transparent;
-}
-
-/* Icone con gradient shimmer */
-.skills-icons i {
-  font-size: 56px;
-  color: #ccc; /* colore neutro elegante */
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,0.1) 0%,
-    rgba(255,255,255,0.25) 50%,
-    rgba(255,255,255,0.1) 100%
-  );
-
-   background-color: #000;
-
-  /*background: linear-gradient(
-  90deg,
-  rgba(0, 120, 255, 0.1) 0%,
-  rgba(0, 120, 255, 0.35) 50%,
-  rgba(0, 120, 255, 0.1) 100%
-);*/
 
 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
-}
 
-/* Hover: colore accent + glow */
-/*.skills-icons i:hover {
-  color: #00b4ff;
-  text-shadow: 0 0 15px rgba(0,180,255,0.8), 0 0 25px rgba(0,180,255,0.5);
-  transform: scale(1.2);
-}*/
+
+
+
 
 
 
@@ -439,103 +586,53 @@ height: 50px;
 
 
 
-.cards-wrapper-1{
-  /*background-color: rgb(196, 196, 196);*/
-  height: auto;
+
+
+.cards-wrapper-1 {
   width: 100%;
-
+  height: auto;
+  padding: 90px 20px;          /* spazio generale */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;           /* serve per posizionare il titolo */
 }
-
-
-.h1-study {
-  font-size: 8rem;
-  font-weight: 800;
-  color: #000000;  
-  margin: 0;
-  text-align: center;
-  letter-spacing: 1px;
-  animation: glowElegant 4s ease-in-out infinite;
-  position: relative;
-  bottom: -100px; /* sposta il titolo verso l’alto di 200px */
-}
-
-
-
-
-
-
-@keyframes glowElegant {
-  0%, 100% {
-    text-shadow: 
-      0 0 6px #3a6073,   /* blu acciaio */
-      0 0 12px #000;     /* nero per profondità */
-  }
-  50% {
-    text-shadow: 
-      0 0 8px #a8c0ff,   /* blu ghiaccio */
-      0 0 20px #d9d9d9;  /* grigio chiaro */
-  }
-}
-
-
-
-
-
-
-
-
-/*.h1-study {
-  position: absolute;
-  top: 20%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-
-  font-size: 10rem;
-  font-weight: 800;
-  letter-spacing: 0.2rem;
-
-  background: linear-gradient(
-    90deg,
-    #0d1b2a,  
-    #1b263b,  
-    #415a77,  
-    #1b263b,  
-    #0d1b2a
-  );
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-transform: uppercase;
-
-  z-index: 0;
-  pointer-events: none;
-
-  animation: colorShiftDark 10s ease infinite;
-}
-
-@keyframes colorShiftDark {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}*/
-
-
-
-
-
-
-
-
-
 
 .cards-wrapper {
-  position: relative;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
-  z-index: 2; /* così le card stanno sopra al titolo */
+  position: relative;
+  z-index: 1;                   /* card sotto il titolo */
+}
+
+.h1-study {
+  font-size: clamp(3rem, 8vw, 9rem);
+  font-weight: 800;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: glowElegant 4s ease-in-out infinite;
+
+  position: absolute;           /* titolo posizionato sopra le card */
+  top: 5%;                     /* regola la percentuale in base a dove vuoi posizionarlo */
+  left: 50%;
+  transform: translateX(-50%);  /* centrato orizzontalmente */
+  
+}
+
+@keyframes glowElegant {
+  0%, 100% {
+    text-shadow: 
+      0 0 6px #3a6073,
+      0 0 12px #000;
+  }
+  50% {
+    text-shadow: 
+      0 0 8px #a8c0ff,
+      0 0 20px #d9d9d9;
+  }
 }
 
 
@@ -624,17 +721,8 @@ height: 50px;
 
 
 
-.about-left, .about-right {
-  flex: 1;
-}
 
-/*.about-left{
-  width: 70%;
-}
 
-.aboute-right{
-  width: 30%;
-}*/
 
 
 /* riga */
@@ -783,6 +871,23 @@ background-color: white;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Wrapper principale centrato */
 .container_skills-group {
   display: flex;
@@ -849,58 +954,7 @@ background-color: white;
 
 
 
-/* Logo centrato e immobile */
-.skills-logo-bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-}
 
-.skills-logo-bg img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  /* niente trasformazioni: rimane fisso */
-}
-
-/* Titolo dei gruppi */
-.skill-group h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-/* Lista delle skills */
-.skill-group ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  width: 100%;
-}
-
-/* Singola skill */
-.skill-group ul li {
-  font-size: 1.1rem;
-  color: #e0e0e0;
-  font-weight: 500;
-  position: relative;
-  padding-left: 1.2rem;
-  transition: transform 0.2s ease, color 0.2s ease; /* hover sulle skills */
-}
-
-/* Piccolo indicatore davanti alle skills */
-.skill-group ul li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: #e0e0e0;
-}
 
 
 
@@ -983,7 +1037,7 @@ background-color: white;
 
 .my-project-title {
   font-family: 'Montserrat', 'Inter', 'Roboto', sans-serif; /* moderno e professionale */
-  font-size: 3.5rem; /* grande e d’impatto */
+font-size: clamp(2rem, 5vw, 5rem);
   font-weight: 900; /* spesso e visibile */
   line-height: 1.2;
   color: #0f0f0f; /* nero acceso */
@@ -995,18 +1049,47 @@ background-color: white;
 
 
 
+.container-project {
+  padding: 10px 20px;
+  margin: 0px 20px;
+  /*background-color: rgba(200, 200, 200, 0.3);*/
+  background-color: rgba(146, 145, 145, 0.3);
+}
 
 
 .my-project-description {
-
-  width: 70%;
- 
-      font-size: 17px;
-  
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 1.5rem;
+  width: 60%;             /* larghezza leggibile */
+  font-size: 17px;        /* dimensione comoda da leggere */
+  font-weight: 600;       /* leggermente marcato */
+  color: #000000;         /* ottimo contrasto su sfondo bianco */
+  line-height: 1.6;       /* distanza tra le righe sufficiente */
+  letter-spacing: 0.02em; /* leggero spazio tra lettere */
+  margin-bottom: 1.5rem;  /* spazio sotto */
+  text-align: left;       /* testo a sinistra */
 }
+
+
+/* Smartphone grandi e medi */
+@media (max-width: 768px) {
+ 
+}
+
+/* Smartphone piccoli */
+@media (max-width: 480px) {
+
+  .container-project {
+  padding: 10px 20px;
+  margin: 0px 0px;
+
+}
+
+  .my-project-description {
+  width: 100%;
+
+}
+
+}
+
 
 .left-decorations {
   display: flex;
@@ -1402,12 +1485,71 @@ background-color: white;
   color: #222; /* testo scuro su sfondo chiaro */
 }
 
-.left-header_1{
-  width: 100%;
-  padding: 30px 20px;
+
+
+.left-header_1 {
+  /*width: 100%;*/
+  
   height: auto;
-  background-color: rgba(206, 206, 207, 0.6);
+  /*background-color: rgba(206, 206, 207, 0.6);*/
+
+  display: flex;         /* abilita Flexbox */
+  flex-direction: row;   /* disposizione orizzontale */
+  gap: 400px;
+  /*flex-wrap: wrap;  */     /* fa andare a capo se non c’è spazio sufficiente */
+  align-items: center;   /* allinea verticalmente al centro */
+
+  border-bottom: 1px solid #000; /* bordo inferiore nero */
+  margin: 0px 20px;
 }
+
+
+.h1_decorazion {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  color: transparent;
+  /*-webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);*/
+  -webkit-text-stroke: 1px black;
+
+  text-transform: uppercase;
+  position: relative;
+  top: 40px;
+}
+
+
+
+@media (max-width: 480px) {
+  .left-header_1 {
+  /*width: 100%;*/
+  
+  height: auto;
+  /*background-color: rgba(206, 206, 207, 0.6);*/
+ gap: 10px;
+  display: flex;         /* abilita Flexbox */
+  flex-direction: row;   /* disposizione orizzontale */
+  
+  
+  align-items: center;   /* allinea verticalmente al centro */
+
+  border-bottom: 1px solid #000; /* bordo inferiore nero */
+  margin: 0px 5px;
+}
+
+.h1_decorazion {
+
+   position: relative;
+  top: 20px; /* sposta verso il basso */
+  
+}
+
+}
+
+
+
+
 
 /* Colonna sinistra: Form */
 .left-col {
@@ -1619,6 +1761,7 @@ background-color: white;
 /* Pulsante moderno e professionale */
 .button-section {
   width: 140px;
+  margin: 20px 20px;
   padding: 0.85rem 0;
   background: #ff7f50; /* arancione elegante */
   border: 1px solid #000000; /* bordo sottile */

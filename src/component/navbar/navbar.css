@@ -30,17 +30,17 @@
   background-color: black; /* o bianco se usi la modalità chiara */
   border: solid 1px rgb(99, 97, 97);
   margin-top: 50px;
-  padding: 1rem;
+  padding: 5px;
   border-radius: 10px;
   /*width: max-content;*/
   max-width: 700px;
-  margin-left: -60%;
+  margin-left: -58%;
   margin-right: auto;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 
@@ -50,7 +50,7 @@
   grid-template-columns: repeat(2, 1fr); /* 3 colonne uguali */
   gap: 20px; /* spazio tra le card */
   max-width: 800px; /* o la larghezza che vuoi */
-  margin: 0 auto; /* per centrare il contenitore */
+  
   color: aliceblue;
 
 }
@@ -80,4 +80,24 @@
 .contact-link a {
   cursor: pointer;
   color: rgb(255, 255, 255);
+}
+
+/* ---------------------
+   Smartphone grandi
+   max-width: 768px
+---------------------- */
+@media (max-width: 768px) {
+  .nav_bar {
+    width: 80%; /* navbar più larga sui tablet / smartphone grandi */
+  }
+}
+
+/* ---------------------
+   Smartphone piccoli
+   max-width: 480px
+---------------------- */
+@media (max-width: 480px) {
+  .nav_bar {
+    width: 95%; /* navbar quasi a tutta larghezza su smartphone piccoli */
+  }
 }

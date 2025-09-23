@@ -7,6 +7,7 @@
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-free": "^7.0.1",
     "aceternity-ui": "^0.2.2",
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.12",
@@ -36,5 +37,3 @@
     "deploy": "gh-pages -d dist"
   }
 }
-
-

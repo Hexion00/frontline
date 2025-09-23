@@ -5,7 +5,7 @@ import { Menu, MenuItem, ProductItem, HoveredLink } from "./navbarMenu";
 
 import "../navbar/navbar.css";
 
-
+import imgDante from "../../img.header/screen-DCommedia.png";
 
 export default function Navbar() {
   const [active, setActive] = useState<string | null>(null);
@@ -14,43 +14,44 @@ export default function Navbar() {
 
   return (
     <Menu setActive={setActive}>
+      {/*
       <MenuItem item="Servizi" active={active} setActive={setActive}>
       <div className="servizi-link">
         <HoveredLink href="#">Sviluppo Web</HoveredLink>
         <HoveredLink href="#">SEO</HoveredLink>
         <HoveredLink href="#">Consulenza</HoveredLink>
         </div>
-      </MenuItem>
+      </MenuItem>*/}
 
       <MenuItem item="Progetti" active={active} setActive={setActive}>
   <div className="cards-container">
    <ProductItem
       title="Progetto 2"
-      description="In questo progetto assagerete un pezzo del divino viaggio Di Dante Aleghieri tra gli inferi"
+      description="In fase di sviluppo"
       href="#"
-      src={""}
+      src={imgDante}
     />
  
     <ProductItem
       title="Progetto 2"
-      description="In questo progetto assagerete un pezzo del divino viaggio Di Dante Aleghieri tra gli inferi"
+      description="In fase di sviluppo"
       href="#"
-      src={""}
+      src={imgDante}
     />
 
        <ProductItem
       title="Progetto 2"
-      description="In questo progetto assagerete un pezzo del divino viaggio Di Dante Aleghieri tra gli inferi"
+      description="In fase di sviluppo"
       href="#"
-      src={""}
+      src={imgDante}
     />
  
 
     <ProductItem
       title="Progetto 2"
-      description="In questo progetto assagerete un pezzo del divino viaggio Di Dante Aleghieri tra gli inferi"
+      description="In fase di sviluppo"
       href="#"
-      src={""}
+      src={imgDante}
     />
  
  
